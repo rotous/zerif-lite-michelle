@@ -16,6 +16,7 @@ zerif_before_our_focus_trigger(); ?>
 		<!-- SECTION HEADER -->
 
 		<div class="section-header">
+			<a name="focus"></a>
 
 			<!-- SECTION TITLE AND SUBTITLE -->
 

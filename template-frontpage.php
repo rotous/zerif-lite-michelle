@@ -40,6 +40,19 @@ endif;
 
 	get_template_part( 'sections/ribbon_with_bottom_button' );
 
+	/* LATEST NEWS */
+	$zerif_latestnews_show = get_theme_mod( 'zerif_latestnews_show' );
+
+	if ( isset( $zerif_latestnews_show ) && $zerif_latestnews_show != 1 ) :
+
+		zerif_before_latest_news_trigger();
+
+		get_template_part( 'sections/latest_news' );
+
+		zerif_after_latest_news_trigger();
+
+	endif;
+
 	/* ABOUT US */
 
 	$zerif_aboutus_show = get_theme_mod( 'zerif_aboutus_show' );
@@ -85,19 +98,6 @@ endif;
 	/* RIBBON WITH RIGHT SIDE BUTTON */
 
 	get_template_part( 'sections/ribbon_with_right_button' );
-
-	/* LATEST NEWS */
-	$zerif_latestnews_show = get_theme_mod( 'zerif_latestnews_show' );
-
-	if ( isset( $zerif_latestnews_show ) && $zerif_latestnews_show != 1 ) :
-
-		zerif_before_latest_news_trigger();
-
-		get_template_part( 'sections/latest_news' );
-
-		zerif_after_latest_news_trigger();
-
-	endif;
 
 	/* CONTACT US */
 	$zerif_contactus_show = get_theme_mod( 'zerif_contactus_show' );

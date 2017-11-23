@@ -53,6 +53,33 @@ if ( isset( $zerif_aboutus_show ) && $zerif_aboutus_show != 1 ) :
 
 	endif;
 
+		/* LATEST NEWS */
+		$zerif_latestnews_show = get_theme_mod( 'zerif_latestnews_show' );
+
+	if ( isset( $zerif_latestnews_show ) && $zerif_latestnews_show != 1 ) :
+
+		zerif_before_latest_news_trigger();
+
+		get_template_part( 'sections/latest_news' );
+
+		zerif_after_latest_news_trigger();
+
+		endif;
+
+		/* TESTIMONIALS */
+
+		$zerif_testimonials_show = get_theme_mod( 'zerif_testimonials_show' );
+
+		if ( isset( $zerif_testimonials_show ) && $zerif_testimonials_show != 1 ) :
+
+			zerif_before_testimonials_trigger();
+
+			get_template_part( 'sections/testimonials' );
+
+			zerif_after_testimonials_trigger();
+
+		endif;
+
 	/* OUR TEAM */
 
 	$zerif_ourteam_show = get_theme_mod( 'zerif_ourteam_show' );
@@ -67,36 +94,9 @@ if ( isset( $zerif_ourteam_show ) && $zerif_ourteam_show != 1 ) :
 
 	endif;
 
-	/* TESTIMONIALS */
-
-	$zerif_testimonials_show = get_theme_mod( 'zerif_testimonials_show' );
-
-if ( isset( $zerif_testimonials_show ) && $zerif_testimonials_show != 1 ) :
-
-	zerif_before_testimonials_trigger();
-
-	get_template_part( 'sections/testimonials' );
-
-	zerif_after_testimonials_trigger();
-
-	endif;
-
 	/* RIBBON WITH RIGHT SIDE BUTTON */
 
 	get_template_part( 'sections/ribbon_with_right_button' );
-
-	/* LATEST NEWS */
-	$zerif_latestnews_show = get_theme_mod( 'zerif_latestnews_show' );
-
-if ( isset( $zerif_latestnews_show ) && $zerif_latestnews_show != 1 ) :
-
-	zerif_before_latest_news_trigger();
-
-	get_template_part( 'sections/latest_news' );
-
-	zerif_after_latest_news_trigger();
-
-	endif;
 
 		/* CONTACT US */
 		$zerif_contactus_show = get_theme_mod( 'zerif_contactus_show' );
